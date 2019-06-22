@@ -51,7 +51,7 @@ function insertRecord(req,res){
 //update function
 function updateRecord(req, res) {
     Assignment.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true }, (err, doc) => {
-        if (!err) { res.redirect('assignment/list'); }
+        if (!err) { res.redirect('assignment/list2'); }
         else {
             if (err.name === 'ValidationError') {
                 handleValidationError(err, req.body);
