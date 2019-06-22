@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<h3>
+    {{viewTitle}}
+</h3>
+
+
+<form action="/assignment" method="post" autocomplete="off">
+    <input type="hidden" name="_id" value="{{assignment._id}}">
+    <div class="form-group">
+        <label>Module</label>
+        <input type="text" class="form-control" name="module" value="{{assignment.module}}"/>
+        <div class="text-danger">{{assignment.moduleError}}</div>
+    </div>
+
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" value="{{assignment.title}}"/>
+        <div class="text-danger">{{assignment.titleError}}</div>
+
+    </div>
+
+    <div class="form-group">
+        <label>File Submissions</label>
+        <input type="text" class="form-control" name="file_submissions" value="{{assignment.file_submissions}}">
+        <div class="text-danger">{{assignment.file_submissionError}}</div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Due date</label>
+            <input type="text" class="form-control" placeholder="dd/mm/yy  (example : 02/12/2019)" name="due_date" value="{{assignment.due_date}}">
+            <div class="text-danger">{{assignment.due_dateError}}</div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>&nbsp&nbsp
+        <a class="btn btn-secondary" href="/assignment/list"><i class="fa fa-list-alt"></i> View All</a>
+
+    </div>
+
+
+</form>
+</html>

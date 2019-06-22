@@ -1,0 +1,36 @@
+<h3><a class="btn btn-secondary" href="/assignment"><i class="fa fa-plus"></i> Create New</a> Assignments</h3>
+<table class="table table-striped">
+    <thead>
+
+    <tr>
+        <th>Module</th>
+        <th>Title</th>
+        <th>Due date</th>
+
+        <th>Assignment Document </th>
+        <th> </th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#each list}}
+            <tr>
+                <td>{{this.module}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.due_date}}</td>
+                <td>{{this.file_submissions}}</td>
+                <!--To edit and delete -->
+                <td>
+                    <a href="/assignment/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>&nbsp
+                </td>
+                <td>
+                    <a href="/assignment/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+
+
+                </td>
+
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

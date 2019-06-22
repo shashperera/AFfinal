@@ -1,25 +1,29 @@
 const mongoose = require('mongoose');
 
 var assignmentSchema = new mongoose.Schema({
-    submission_status: {
-        type:String
+    module: {
+        type:String,
+        required : 'This field is required'
     },
-    grading_status: {
-        type:String
+    //assignment title
+    title: {
+        type:String,
+        required : 'This field is required'
     },
     due_date: {
-        type:Date
+        type: String,
+        required : 'Date invalid'
     },
-    time_remaining: {
-        type:String
-    },
-    last_modified: {
-        type:String
-    },
-    file_submissions:{
-        type:String
+   /* due_time: {
+        type: Date.now(),
+        required : 'Date invalid'
+    },*/
+    file_submissions: {
+        type:String,
+        required : 'Assignment not uploaded'
     }
+
 
 });
 
-mongoose.model("Assignments",assignmentSchema);
+mongoose.model("Assignment",assignmentSchema);
