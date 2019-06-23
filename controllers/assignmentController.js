@@ -2,8 +2,15 @@
 
 const express = require('express');
 var router = express.Router();
+var app = express();
 const mongoose= require('mongoose');
 const Assignment = mongoose.model('Assignment');
+
+const pdfMake = require('../pdfmake/pdfmake');
+const vfsFonts = require('../pdfmake/vfs_fonts');
+
+
+pdfMake.vfs = vfsFonts.pdfMake.vfs;
 
 router.get('/',(req,res)=>{
     res.render("assignment/add&edit", {
@@ -130,10 +137,4 @@ router.get('/delete/:id', (req, res) => {
 
 
 
-
 module.exports = router;
-/*
-*
-*
-*
-* */

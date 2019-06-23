@@ -19,11 +19,21 @@ var assignmentSchema = new mongoose.Schema({
         required : 'Date invalid'
     },*/
     file_submissions: {
-        type:String,
-        required : 'Assignment not uploaded'
+        type:String
+        //data:Buffer,
+        //contentType: String
     }
 
 
 });
+
+
+
+// Custom validation for Module
+assignmentSchema.path('module').validate((val) => {
+    moduleRegex = /^(([(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return moduleRegex.test(val);
+}, 'Invalid module name.');
+
 
 mongoose.model("Assignment",assignmentSchema);

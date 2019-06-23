@@ -1,7 +1,9 @@
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <h3><a class="btn btn-secondary" href="/assignment"><i class="fa fa-plus"></i> Create New</a> Assignments</h3>
 <table class="table table-striped">
     <thead>
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <tr>
         <th>Module</th>
         <th>Title</th>
@@ -26,11 +28,12 @@
                 </td>
                 <td>
                     <a href="/assignment/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
-
-
-                </td>
+               </td>
 
             </tr>
+
         {{/each}}
+
     </tbody>
 </table>
+

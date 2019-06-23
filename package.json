@@ -12,9 +12,13 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "express": "^4.16.4",
+    "express-fileupload": "^1.1.5",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.1.2",
+    "jspdf": "^1.5.3",
     "mongoose": "^5.3.4",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "pdf": "^0.1.0",
+    "pdfkit": "^0.10.0"
   }
 }
