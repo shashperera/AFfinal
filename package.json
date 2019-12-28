@@ -14,7 +14,7 @@
     "express": "^4.16.4",
     "express-fileupload": "^1.1.5",
     "express-handlebars": "^3.0.0",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "jspdf": "^1.5.3",
     "mongoose": "^5.3.4",
     "nodemon": "^1.19.1",
